@@ -28,6 +28,9 @@ export default function Navigation() {
                     </a>
                     <a href='#' style={styles.navItem}>
                         BROWSER
+                        <div style={styles.dropdown}>
+
+                        </div>
                     </a>
                     <a href='#' style={styles.navItem}>
                         COMUNITY
@@ -52,6 +55,9 @@ export default function Navigation() {
     );
 }
 const styles = {
+    dropdown: {
+
+    },
     container: {
         backgroundColor: "#F4F1EA",
         
@@ -62,7 +68,7 @@ const styles = {
         justifyContent: 'center',
         flexDirection: "row",
         flex: 1,
-        border: "#79593170 solid 2px",
+        border: "#59793170 solid 2px",
         backgroundColor: "#eaddcd",
 
     },
@@ -72,6 +78,7 @@ const styles = {
         fontSize: 16,
         fontFamily: "Montserrat",
         textDecoration: "none",
+        position: "relative"
     },
     tableRow: {
         border: "1px solid green",
@@ -84,7 +91,7 @@ const styles = {
         fontSize: 18,
         marginTop: 0,
 
-
+        transform: "translateY(-15px)"
     },
     navIconContainer: {
         textAlign: "center",

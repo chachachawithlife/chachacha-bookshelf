@@ -32,7 +32,7 @@ const styles = {
         display: "flex",
         flexDirection: "row",
         backgroundColor: "white",
-        border: " 1px solid #59793170",
+        border: " 1px solid #795931",
         width: 500,
         margin: 40,
 
