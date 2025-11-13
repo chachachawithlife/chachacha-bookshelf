@@ -5,8 +5,7 @@ import book1 from "../assets/book1.jpeg";
 export default function HomeScreen({title,subtitle}) {
     return (
         <div style={styles.container}>
-            <img style={styles.itemImg} src={book1}>
-            </img>
+            <img style={styles.itemImg} src={book1}/>
             <div>
                 <p style={styles.itemTitle}>{title}
                     <span style={styles.itemNote}> {subtitle}</span>
