@@ -1,4 +1,3 @@
-import React from 'react';
 import logo from '../assets/Cat.dancing.png';
 import ic_bell from '../assets/ic_bell.svg';
 import ic_mailbox from '../assets/ic_mailbox.svg';
@@ -38,8 +37,8 @@ export default function Navigation({ searchTerm, onSearchChange }) {
                     <input
                         placeholder="Search here"
                         style={styles.navSearch}
-                        value={searchTerm}                     // giá trị hiện tại
-                        onChange={(e) => onSearchChange(e.target.value)}  // mỗi lần gõ, cập nhật state
+                        value={searchTerm}                     
+                        onChange={(e) => onSearchChange(e.target.value)}
                     />
 
                     <img style={styles.navIcon} width={36} height={36} src={ic_bell}>
