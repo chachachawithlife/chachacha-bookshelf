@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import './App.css';
 import logo from './assets/Cat.dancing.png';
 import ic_bell from './assets/ic_bell.svg';
@@ -55,22 +55,38 @@ const rightBooks = [
 ];
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+  // chuẩn hóa keyword tìm kiếm về chữ thường
+  const lowercasedSearch = searchTerm.toLowerCase();
+
+  // lọc sách cho cột trái
+  const filteredLeftBooks = leftBooks.filter((book) =>
+    book.title.toLowerCase().includes(lowercasedSearch)
+  );
+
+  // lọc sách cho cột phải
+  const filteredRightBooks = rightBooks.filter((book) =>
+    book.title.toLowerCase().includes(lowercasedSearch)
+  );
   return (
     <div>
-      <Navigation />
-
+      <Navigation
+        searchTerm={searchTerm}
+        onSearchChange={setSearchTerm}
+      />
       <div style={styles.container}>
         <div style={styles.columnContainer}>
-          {leftBooks.map((book) => (
+          {filteredLeftBooks.map((book) => (
             <HomeScreen
               key={book.id}
               title={book.title}
               subtitle={book.subtitle}
             />
           ))}
+
         </div>
         <div style={styles.columnContainer}>
-          {rightBooks.map((book) => (
+          {filteredRightBooks.map((book) => (
             <HomeScreen
               key={book.id}
               title={book.title}

@@ -5,7 +5,7 @@ import ic_mailbox from '../assets/ic_mailbox.svg';
 import ic_user from '../assets/ic_user.svg';
 import ic_chat from '../assets/ic_chat.svg';
 
-export default function Navigation() {
+export default function Navigation({ searchTerm, onSearchChange }) {
     return (
         <div style={styles.container}>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,8 +35,13 @@ export default function Navigation() {
                     <a href='#' style={styles.navItem}>
                         COMUNITY
                     </a>
-                    <input placeholder='Search here' style={styles.navSearch}>
-                    </input>
+                    <input
+                        placeholder="Search here"
+                        style={styles.navSearch}
+                        value={searchTerm}                     // giá trị hiện tại
+                        onChange={(e) => onSearchChange(e.target.value)}  // mỗi lần gõ, cập nhật state
+                    />
+
                     <img style={styles.navIcon} width={36} height={36} src={ic_bell}>
                     </img>
                     <img style={styles.navIcon} width={36} height={36} src={ic_mailbox}>
@@ -60,7 +65,7 @@ const styles = {
     },
     container: {
         backgroundColor: "#F4F1EA",
-        
+
     },
     navContainer: {
         display: "flex", // Added display property
