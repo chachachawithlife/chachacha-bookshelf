@@ -1,0 +1,9 @@
+.nav-item {
+  margin: 0 20px;
+  cursor: pointer;
+  transition: font-weight 0.2s ease;
+}
+
+.nav-item:hover {
+  font-weight: bold;
+}

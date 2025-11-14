@@ -1,23 +1,17 @@
-import book1 from "../assets/book1.jpeg";
-
-
-export default function HomeScreen({title,subtitle, author, image_link}) {
+export default function HomeScreen({ title, subtitle, author, image_link, onClick }) {
     return (
-        <div style={styles.container}>
-            <img style={styles.itemImg} src={image_link}/>
+        <div style={styles.container} onClick={onClick}>
+            <img style={styles.itemImg} src={image_link} alt={title} />
             <div>
-                <p style={styles.itemTitle}>{title}
+                <p style={styles.itemTitle}>
+                    {title}
                     <span style={styles.itemNote}> {subtitle}</span>
-                    </p>
-                <p style={styles.itemDescription}> {author} </p>
-
+                </p>
+                <p style={styles.itemDescription}>{author}</p>
             </div>
-
         </div>
-
     );
 }
-
 const styles = {
     itemImg: {
         width: 90,
@@ -42,7 +36,7 @@ const styles = {
         fontSize: 16,
         fontWeight: "bold",
         paddingRight: 5,
-        
+
 
     },
     itemNote: {
