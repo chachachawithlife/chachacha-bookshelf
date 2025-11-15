@@ -20,10 +20,10 @@ export default function Navigation({ searchTerm, onSearchChange }) {
                         <img src={logo} alt="logo" width={191} height={140} />
                         <p style={styles.navHeader}>chachachawithlife</p>
                     </div>
-                    <a className="nav-item" href='#' style={styles.navItem} onClick={() => navigate("/")}>
+                    <a className="nav-item" href='#' style={styles.navItem} >
                         HOME
                     </a>
-                    <a className="nav-item" href="#" style={styles.navItem}>
+                    <a className="nav-item" href="#" style={styles.navItem} onClick={() => navigate("/")}>
                         MY BOOKS
                     </a>
                     <a className="nav-item" href="#" style={styles.navItem}>
@@ -67,7 +67,7 @@ const styles = {
 
     },
     container: {
-        backgroundColor: "#F4F1EA",
+        backgroundColor: "#d3571aff",
 
     },
     navContainer: {
@@ -77,7 +77,7 @@ const styles = {
         flexDirection: "row",
         flex: 1,
         border: "#59793170 solid 2px",
-        backgroundColor: "#eaddcd",
+        backgroundColor: "#34656D",
 
     },
     navItem: {
