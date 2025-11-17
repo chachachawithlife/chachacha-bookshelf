@@ -3,6 +3,8 @@ import ic_bell from '../assets/ic_bell.svg';
 import ic_mailbox from '../assets/ic_mailbox.svg';
 import ic_user from '../assets/ic_user.svg';
 import ic_chat from '../assets/ic_chat.svg';
+import ic_favor from '../assets/ic_favor.png';
+import ic_add from '../assets/ic_add.png';
 import { useNavigate } from "react-router-dom";
 import "./Navigation.css";
 
@@ -45,9 +47,9 @@ export default function Navigation({ searchTerm, onSearchChange }) {
                         onChange={(e) => onSearchChange(e.target.value)}
                     />
 
-                    <img style={styles.navIcon} width={36} height={36} src={ic_bell}>
+                    <img style={styles.navIcon} width={36} height={36} src={ic_add}>
                     </img>
-                    <img style={styles.navIcon} width={36} height={36} src={ic_mailbox}>
+                    <img style={styles.navIcon} width={36} height={36} src={ic_favor}>
                     </img>
                     <img style={styles.navIcon} width={36} height={36} src={ic_user}>
                     </img>
@@ -77,7 +79,7 @@ const styles = {
         flexDirection: "row",
         flex: 1,
         border: "#59793170 solid 2px",
-        backgroundColor: "#34656D",
+        backgroundColor: "#f8e2afff",
 
     },
     navItem: {
@@ -105,7 +107,7 @@ const styles = {
         textAlign: "center",
     },
     navSearch: {
-        backgroundColor: "#f9f5f0",
+        backgroundColor: "#f9f4ecff",
         width: "20%",
         height: 32,
         border: "#79593170 1px solid",
